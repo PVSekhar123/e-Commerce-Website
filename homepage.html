@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic metas -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile sizing meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <!-- title -->
+    <title>Best Online Shopping Site</title>
+    <!-- linking external stylesheet -->
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/sidenav.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/slides.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <!-- extra font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <!-- favicon (icon beside title of website) -->
+    <link rel="icon" type="image/x-icon" href="/icon/favicon.ico">
+    <!-- for using symbols from font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+  <div id="main">
+    <!-- Login -->
+    <div id="login">
+      <form>
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('login').style.display='none'" class="close">&times;</span>
+          <img src="images/avatar.png" alt="Avatar" class="avatar" height="40px" width="40px">
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Username :</b></label>
+          <input type="text" class="info" placeholder="Enter Username" required><br>
+        
+          <label for="email"><b>Enter email:</b></label>
+          <input type="email" class="info" placeholder="Enter Your Email" required><br> 
+
+          <label for="psw"><b>Password  :</b></label>
+          <input type="password" class="info" placeholder="Enter Password" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw"><a href="#">Forgot password?</a></span>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Add To Cart -->
+    <div id="cart" class="cart_display">
+      <div class="CartContainer">
+   	   <div class="Header">
+   	   	<h3 class="Heading">Shopping Cart</h3>
+   	   	<h5 class="Action">Remove all</h5>
+   	   </div>
+
+   	   <div class="Cart-Items">
+   	   	  <div class="image-box">
+   	   	  	<img src="images/grocery/Kohinoor_Basmati_Rice_1Kg.png" class="cart_item_img"/>
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">Kohinoor Basmati</h1>
+   	   	  	<h3 class="subtitle">1Kg</h3>
+   	   	  	<!-- <img src="images/veg.png" class="veg_icon"/> -->
+   	   	  </div>
+   	   	  <div class="counter">
+   	   	  	<div class="btn">+</div>
+   	   	  	<div class="count">2</div>
+   	   	  	<div class="btn">-</div>
+   	   	  </div>
+   	   	  <div class="prices">
+   	   	  	<div class="amount">Rs. 320</div>
+   	   	  	<div class="save"><u>Save for later</u></div>
+   	   	  	<div class="remove"><u>Remove</u></div>
+   	   	  </div>
+   	   </div>
+
+   	   <div class="Cart-Items pad">
+   	   	  <div class="image-box">
+   	   	  	<img src="images/grocery/Tata_Salt_Plus.png" class="cart_item_img"/>
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">Tata Salt Plus</h1>
+   	   	  	<h3 class="subtitle">500g</h3>
+   	   	  </div>
+   	   	  <div class="counter">
+   	   	  	<div class="btn">+</div>
+   	   	  	<div class="count">1</div>
+   	   	  	<div class="btn">-</div>
+   	   	  </div>
+   	   	  <div class="prices">
+   	   	  	<div class="amount">Rs. 25</div>
+   	   	  	<div class="save"><u>Save for later</u></div>
+   	   	  	<div class="remove"><u>Remove</u></div>
+   	   	  </div>
+   	   </div>
+   	   <hr> 
+   	   <span class="checkout">
+   	   <div class="total">
+   	   	<div>
+   	   		<div class="Subtotal">Sub-Total</div>
+   	   		<div class="items">2 items</div>
+   	   	</div>
+   	   	<div class="total-amount">Rs. 345</div>
+   	   </div>
+   	   <button class="button" onclick="document.getElementById('cart').style.display='none'">Checkout</button></div>
+      </div>
+    </div>
+
+    <!-- sidenavigation -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="homepage.html">Home</a>
+      <a onclick="document.getElementById('login').style.display='block'">Login</a>
+      <a href="#">Gift Cards & Mobile Recharge</a>
+      <a href="#">Customer Service</a>
+      <a href="#">About Us</a>
+    </div>
+
+    <!-- header -->
+    <div id="header">
+      <!-- creating 3 columns for logo,welcome note and nav   -->
+      <div class="row">
+        <!-- logo -->
+        <div class="column left">
+          <img src="images/logo.png" class="logo">
+        </div>
+
+        <!-- welcome note -->
+        <div class="column middle">
+          <div class="welcome">
+            <h1>Welcome To EasyShopping</h1>
+            <h2>--- A One Stop Destination For All Your Shopping Needs ---</h2>
+          </div>
+        </div>
+        
+        <div class="column right">
+          <div class="login">
+            <span style="cursor:pointer" onclick="document.getElementById('login').style.display='block'"><a href="#clothing"><img src="images/login.png" width="40" height="40"></a></span>
+          </div>
+          <div class="cart">
+            <span style="cursor:pointer" onclick="document.getElementById('cart').style.display='block'"><img src="images/cart.png" width="40" height="40"></span>
+          </div>
+          <div class="navigation">
+            <span style="cursor:pointer" onclick="openNav()"><img src="images/togle-menu-icon.png" width="40" height="40"></span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="categories">
+        <b>
+          <a href="#offers">OFFERS</a>
+          <a href="#clothing">CLOTHING</a>
+          <a href="#watches">WATCHES</a>
+          <a href="#Grocery">GROCERY</a>
+          <a href="#electronics">ELECTRONICS</a>
+          <a href="#jewellery">JEWELLERY</a>
+          <a href="#cleaning">CLEANING</a>
+        </b>
+      </div>
+
+    </div>
+
+    
+    <a id="offers"><div class="section_title">-----   Offers:   -----</div></a>
+    <div class="slider" id="sales">
+      <figure>
+        <img src="images/summer sale.jpg">
+        <img src="images/Grocery-Banner.png">
+        <img src="images/clothes sale.jpg">
+        <img src="images/watches_sale.jpg">
+      </figure>
+    </div>
+    <hr>
+    <a id="clothing"><div class="section_title">-----   Clothing Section:   -----</div></a>
+    <div class="product_title">Mens' Wear:</div>
+    <div class="display_products" id="mens_wear">
+      <div class="row">
+        <div class="col-5">
+          <img src="images/mens_wear/cotton_sports_tshirt.jfif">
+          <h4>Cotton Sports T-shirt</h4>
+          <span class="discount">(50% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 1,549</span>
+            <span class="actual_price">Rs. 3,099</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/mens_wear/black polo.jfif">
+          <h4>Black Polo T-shirt</h4>
+          <span class="discount">(55% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 999</span>
+            <span class="actual_price">Rs. 2,199</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/mens_wear/denim_jacket.jfif">
+          <h4>Denim Jacket</h4>
+          <span class="discount">(30% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 2,449</span>
+            <span class="actual_price">Rs. 3,499</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/mens_wear/plain_formal_shirt.jfif">
+          <h4>Formal Shirt with Tie</h4>
+          <span class="discount">(25% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 899</span>
+            <span class="actual_price">Rs. 1,199</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/mens_wear/red_printed.jfif">
+          <h4>Red Printed T-shirt</h4>
+          <span class="discount">(50% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 399</span>
+            <span class="actual_price">Rs. 799</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product_title">Womens' Wear:</div>
+    <div class="display_products" id="womens_wear">
+      <div class="row">
+        <div class="col-5">
+          <img src="images/womens_wear/accordian_pleat_empire_dress.png">
+          <h4>Accordian Pleat Empire Dress</h4>
+          <span class="discount">(55% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 719</span>
+            <span class="actual_price">Rs. 1,599</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/womens_wear/floral_print.png">
+          <h4>Floral Print</h4>
+          <span class="discount">(50% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 1,229</span>
+            <span class="actual_price">Rs. 2,459</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/womens_wear/polka_dress_with_ruffled_shurg.png">
+          <h4>Polka Dress With Ruffled Shurg</h4>
+          <span class="discount">(61% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 1,286</span>
+            <span class="actual_price">Rs. 3,299</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/womens_wear/floral_saree.png">
+          <h4>Floral Saree</h4>
+          <span class="discount">(75% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 899</span>
+            <span class="actual_price">Rs. 3,599</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/womens_wear/solid_t-shirt_dress.png">
+          <h4>Solid T-shirt Dress</h4>
+          <span class="discount">(60% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 1,360</span>
+            <span class="actual_price">Rs. 3,400</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product_title">Kids' Wear:</div>
+    <div class="display_products" id="kids_wear">
+      <div class="row">
+        <div class="col-5">
+          <img src="images/kids_wear/Ironman_Print_T-shirt.png">
+          <h4>Ironman Print T-shirt</h4>
+          <span class="discount">(43% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 398</span>
+            <span class="actual_price">Rs. 699</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/kids_wear/Girls_Minnie_Mouse_Nightsuit.png">
+          <h4>Girls Minnie Mouse Nightsuit</h4>
+          <span class="discount">(60% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 439</span>
+            <span class="actual_price">Rs. 1,099</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/kids_wear/Kids_Pack_of_3_Masks.png">
+          <h4>Kids Pack of 3 Masks</h4>
+          <span class="discount">(58% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 293</span>
+            <span class="actual_price">Rs. 699</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/kids_wear/Lion_King_T-shirt.png">
+          <h4>Lion King T-shirt</h4>
+          <span class="discount">(40% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 599</span>
+            <span class="actual_price">Rs. 999</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/kids_wear/Spider-man_Print_T-shirt.png">
+          <h4>Spider-man Print T-shirt</h4>
+          <span class="discount">(43% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 398</span>
+            <span class="actual_price">Rs. 699</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+      </div>
+    </div>
+
+    <a id="watches"><div class="section_title">-----   Watches Section:   -----</div></a>  
+    <div class="display_products">
+      <div class="row">
+        <div class="col-5">
+          <img src="images/watches/Fastrack_Unisex_Analogue_Watch.png">
+          <h4>Fastrack Unisex Analogue Watch</h4>
+          <span class="discount">(10% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 765</span>
+            <span class="actual_price">Rs. 850</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/watches/Fossil_Women_Analogue_Watch.png">
+          <h4>Fossil Women Analogue Watch</h4>
+          <span class="discount">(50% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 4,998</span>
+            <span class="actual_price">Rs. 9,995</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/watches/G-Shock_Analogue_and_Digital_Watch.png">
+          <h4>G-Shock Analogue and Digital Watch</h4>
+          <span class="discount">ONLY FEW LEFT!</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 10,995</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/watches/Mens_Leather_Strap_Watch.png">
+          <h4>Mens Leather Strap Watch</h4>
+          <span class="discount">(Rs. 2,500 off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 1,499</span>
+            <span class="actual_price">Rs. 3,999</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/watches/Noice_Pro2_Smart_Watch.png">
+          <h4>Noice Pro2 Smart Watch</h4>
+          <span class="discount">(Rs. 2,200 off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 2,799</span>
+            <span class="actual_price">Rs. 4,999</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+      </div>
+    </div>
+
+    <a id="Grocery"><div class="section_title">-----   Grocery Section:   -----</div></a>
+    <div class="display_products">
+      <div class="row">
+        <div class="col-5">
+          <img src="images/grocery/Tata_Salt_Plus.png">
+          <h4>Tata Salt Plus</h4>
+          <span class="discount">(Rs. 5 off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 25</span>
+            <span class="actual_price">Rs. 30</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/grocery/Kohinoor_Basmati_Rice_1Kg.png">
+          <h4>Kohinoor Basmati Rice 1Kg</h4>
+          <span class="discount">(20% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 160</span>
+            <span class="actual_price">Rs. 200</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/grocery/Tulsi_Walnut_Kernals.png">
+          <h4>Tulsi Walnut Kernals(200gms)</h4>
+          <span class="discount">(Rs. 40 off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 350</span>
+            <span class="actual_price">Rs. 390</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/grocery/Kissan_1Kg_Tomato_Ketchup.png">
+          <h4>Kissan 1Kg Tomato Ketchup</h4>
+          <span class="discount">(40% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 599</span>
+            <span class="actual_price">Rs. 999</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/grocery/Kashmiri Apple Fresh Fruit.png">
+          <h4>Kashmiri Apple Fresh Fruit(4 pieces)</h4>
+          <span class="discount">(40% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 599</span>
+            <span class="actual_price">Rs. 1,000</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+      </div>
+    </div>
+
+    <a id="electronics"><div class="section_title">-----   Electronics Section:   -----</div></a>
+    <div class="display_products" id="Electronics">
+      <div class="row">
+        <div class="col-5">
+          <img src="images/electronics/LG 1.5 Ton 4 Star DUAL Inverter Split AC.png">
+          <h4>LG 1.5 Ton 4 Star DUAL Inverter Split AC</h4>
+          <span class="discount">(18% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 39,990</span>
+            <span class="actual_price">Rs. 48,990</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/electronics/Bajaj Frore 1200 mm Ceiling Fan (Brown).png">
+          <h4>Bajaj Frore 1200 mm Ceiling Fan (Brown)</h4>
+          <span class="discount">(25% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 1,349</span>
+            <span class="actual_price">Rs. 1,799</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/electronics/LG 190 L 4 Star Inverter Single Door Refrigerator (GL-D201ASCY, Scarlet Charm).png">
+          <h4>LG 190 L 4 Star Inverter Single Door Refrigerator (GL-D201ASCY, Scarlet Charm)</h4>
+          <span class="discount">(13% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 18,590</span>
+            <span class="actual_price">Rs. 2,900</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/electronics/Apple iPhone 13 Mini (512GB) - Blue.png">
+          <h4>Apple iPhone 13 Mini (512GB) - Blue</h4>
+          <span class="discount">FEW PIECES LEFT!!</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 99,999</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/electronics/Eureka forbes Aquasure From Aquaguard Amaze RO+UV+MTDS 7L Water Purifier.png">
+          <h4>Eureka forbes Aquasure From Aquaguard Amaze RO+UV+MTDS 7L Water Purifier</h4>
+          <span class="discount">(44% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 8,999</span>
+            <span class="actual_price">Rs. 16,000</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+      </div>
+    </div>
+
+    <a id="jewellery"><div class="section_title">-----   Jewellery Section:   -----</div></a>
+    <div class="display_products">
+      <div class="row">
+        <div class="col-5">
+          <img src="images/Jewellery/Goddess Ruby Pendant Temple Jewellery Set.png">
+          <h4>Goddess Ruby Pendant Temple Jewellery Set</h4>
+          <span class="discount">(58% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 749</span>
+            <span class="actual_price">Rs. 1,800</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/Jewellery/Ruby & Emerald, Pearl based Peacock Design Pattern Gold Plated Latest Fashion Choker Set.png">
+          <h4>Peacock Design Pattern Gold Plated Latest Fashion Choker Set</h4>
+          <span class="discount">(63% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 699</span>
+            <span class="actual_price">Rs. 1899</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/Jewellery/Estele Necklace Set for Women.png">
+          <h4>Estele Necklace Set for Women</h4>
+          <span class="discount">(89% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 447</span>
+            <span class="actual_price">Rs. 3,999</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/Jewellery/American Diamond Studded Rhodium Plated Necklace Set With Earrings Jewellery Set.png">
+          <h4>American Diamond Studded Rhodium Plated Necklace Set With Earrings</h4>
+          <span class="discount">(67% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 3,299</span>
+            <span class="actual_price">Rs. 9,996</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/Jewellery/Yellow Chimes Ethnic One Gram Gold Designer Long Haram.png">
+          <h4>Yellow Chimes Ethnic One Gram Gold Designer Long Haram</h4>
+          <span class="discount">(77% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 388</span>
+            <span class="actual_price">Rs. 1,661</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+      </div>
+    </div>
+
+    <a id="cleaning"><div class="section_title">-----   Cleaning Section:   -----</div></a>
+    <div class="display_products">
+      <div class="row">
+        <div class="col-5">
+          <img src="images/cleaning/Scotch-Brite No-Dust Broom, Long handle, Easy floor cleaning.png">
+          <h4>Scotch-Brite No-Dust Broom, Long Handle, Easy Floor Cleaning</h4>
+          <span class="discount">(4% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 270</span>
+            <span class="actual_price">Rs. 280</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/cleaning/Scotch-Brite Sponge Wipe, Pack of 5.png">
+          <h4>Scotch-Brite Sponge Wipe, Pack of 5</h4>
+          <span class="discount">(3% off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 286</span>
+            <span class="actual_price">Rs. 294</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/cleaning/Harpic Disinfectant Bathroom Cleaner Liquid, Lemon - 1 L + Floral - 1 L.png">
+          <h4>Harpic Disinfectant Bathroom Cleaner Liquid,Lemon(1L)+Floral(1L)</h4>
+          <span class="discount">(Rs. 8 off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 354</span>
+            <span class="actual_price">Rs. 362</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/cleaning/Harpic Flushmatic In-Cistern Toilet Cleaner Blocks, Marine - 50 g (Buy 5 Get 1 Free).png">
+          <h4>Harpic Flushmatic Toilet Cleaner Blocks,Marine-50 g(Buy 5 Get 1 Free)</h4>
+          <span class="discount">(Rs. 21 off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 369</span>
+            <span class="actual_price">Rs. 390</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+        <div class="col-5">
+          <img src="images/cleaning/Odonil Air Freshener Blocks, Mix Fragrances 50gm (3+1).png">
+          <h4>Odonil Air Freshener Blocks, Mix Fragrances 50gm (3+1)</h4>
+          <span class="discount">(Rs. 17 off)</span>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>          
+          </div>
+          <div>
+            <span class="discounted_price">Rs. 139</span>
+            <span class="actual_price">Rs. 156</span>
+          </div>
+          <div class="add_to_cart ">Add To Cart</div>
+        </div>
+      </div>
+    </div>
+
+    <div><script src="js/homepage.js"></script></div>
+  </div>
+</body>
+</html>
